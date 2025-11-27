@@ -1,0 +1,37 @@
+{
+    "chargerStations": {
+        "station01": {
+            "stationStatus": "online",
+            "lastUpdate": "init",
+            "guns": {
+                "gun01": {
+                    "status": "available",
+                    "mode": "normal",
+                    "precheck": {
+                        "rfid": false,
+                        "relay": false,
+                        "sensor": false,
+                        "cloud": true
+                    },
+                    "telemetry": {
+                        "voltage": 0,
+                        "current": 0,
+                        "power": 0,
+                        "energy": 0,
+                        "duration": 0,
+                        "startTime": null
+                    },
+                    "user": {
+                        "id": null,
+                        "name": null
+                    },
+                    "controls": {
+                        "relayState": false,
+                        "start": false,
+                        "stop": false
+                    }
+                }
+            }
+        }
+    }
+}
