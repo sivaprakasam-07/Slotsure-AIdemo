@@ -1,8 +1,8 @@
 export default function StatusPanel({ data }) {
     if (!data) {
         return (
-            <div className="bg-gray-800 text-white p-4 rounded-lg">
-                <p>Loading Status...</p>
+            <div className="bg-gradient-to-br from-white/4 to-white/6 border border-white/8 p-4 rounded-lg shadow-sm">
+                <p className="text-white">Loading Status...</p>
             </div>
         );
     }
@@ -19,15 +19,15 @@ export default function StatusPanel({ data }) {
     const color = statusColors[status] || "text-white";
 
     return (
-        <div className="bg-gray-800 text-white p-4 rounded-lg">
-            <h2 className="text-xl font-bold mb-3">Status Panel</h2>
+        <div className="bg-gradient-to-br from-white/4 to-white/6 border border-white/8 p-4 rounded-lg shadow-sm">
+            <h2 className="text-lg font-semibold mb-2 text-white">Status Panel</h2>
 
-            <p className="text-lg">
-                Gun Status: <span className={`${color}`}>{status}</span>
+            <p className="text-sm text-slate-200">
+                Gun Status: <span className={`${color} font-medium ml-2`}>{status}</span>
             </p>
 
-            <p className="mt-2 text-md">
-                Mode: <span className="text-purple-400">{mode}</span>
+            <p className="mt-2 text-sm text-slate-200">
+                Mode: <span className="text-purple-300 font-medium ml-2">{mode}</span>
             </p>
         </div>
     );
