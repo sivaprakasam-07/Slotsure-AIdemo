@@ -1,9 +1,10 @@
 import { ref, onValue } from "firebase/database";
 import { db } from "./config";
 
-export const listenSlots = (callback) => {
-    const slotsRef = ref(db, "/");
-    onValue(slotsRef, (snapshot) => {
-        callback(snapshot.val());
+export const listenStations = (callback) => {
+    const stationsRef = ref(db, "chargerStations");
+    const unsubscribe = onValue(stationsRef, (snapshot) => {
+        callback(snapshot.val() || {});
     });
+    return unsubscribe;
 };
